@@ -38,6 +38,19 @@ function build(myJSON,i){
     a.appendChild(text);
     li.appendChild(a);
     document.querySelector("ul").appendChild(li);
+    if(myJSON.Menu[i].Submenu.length > 0){
+        li.className = "dropdown";
+        a.className = "dropbtn";
+        var con = document.createElement("DIV");
+        li.appendChild(con);
+        con.className = "dropdown__content";
+        for(let j = 0; j < myJSON.Menu[i].Submenu.length; j++){
+            var link = document.createElement("A");
+            var text2 = document.createTextNode(myJSON.Menu[i].Submenu[j]);
+            link.appendChild(text2);
+            con.appendChild(link); 
+        }
+    }
 }
 
 

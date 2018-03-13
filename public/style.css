@@ -27,7 +27,7 @@ body {
 #nav {
     float: left;
     font-size: 21px;
-    height: auto;
+    height: fit-content;
 }
 
 .search {
