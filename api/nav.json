@@ -1,0 +1,32 @@
+{ "Menu" : [
+    {
+        "Name" :"About",
+        "Submenu": []
+    },
+    {
+        "Name": "Projects",
+        "Submenu": []
+    },
+    {
+        "Name": "Carrers",
+        "Submenu" : ["Application Management",
+                    "Development",
+                    "Testing",
+                    "Project Management",
+                    "Security",
+                    "Business Operations",
+                    "Analysis & Architecture"]
+    },
+    {
+        "Name" : "News",
+        "Submenu" : []
+    },
+    {
+        "Name": "Events",
+        "Submenu": []
+    },
+    {
+        "Name": "Contact",
+        "Submenu":[]
+    }
+]}
