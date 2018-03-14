@@ -1,33 +1,66 @@
 { "Menu" : [
     {
         "Name" :"About",
-        "Submenu": []
+        "Submenu": [],
+        "Link" : "http://www.endava.com/en/About"
     },
     {
         "Name": "Projects",
-        "Submenu": ["FeC",
-                    "DBC"]
+        "Submenu": [{
+                        "Name" : "FrontEnd Challenge",
+                        "Link" : "https://github.com/clarke32/FrontChallenge"
+                    },
+                    {
+                        "Name" : "Bank Agent",
+                        "Link" : "https://github.com/clarke32/BankAgent"
+                    }],
+        "Link" : "#"
     },
     {
         "Name": "Carrers",
-        "Submenu" : ["Application Management",
-                    "Development",
-                    "Testing",
-                    "Project Management",
-                    "Security",
-                    "Business Operations",
-                    "Analysis & Architecture"]
+        "Submenu" : [{
+                        "Name" : "Application Management",
+                        "Link" : "http://www.endava.com/en/Services/Advanced-AM"
+                    },
+                    {
+                        "Name" : "Development",
+                        "Link" : "http://www.endava.com/en/Digital"
+                    },
+                    {
+                        "Name" : "Testing",
+                        "Link" : "http://www.endava.com/en/Services/Test-Automation-And-Engineering"
+                    },
+                    {
+                        "Name" : "Project Management",
+                        "Link" : "http://careers.endava.com/en/Be-More"
+                    },
+                    {
+                        "Name" : "Security",
+                        "Link" : "http://www.endava.com/en/Services/Cloud"
+                    },
+                    {
+                        "Name" : "Business Operations",
+                        "Link" : "http://www.endava.com/en/Services/Mobile-and-IOT"
+                    },
+                    {
+                        "Name" : "Analysis & Architecture",
+                        "Link" : "http://www.endava.com/en/Services/Insights-Through-Data"
+                    }],
+        "Link" : "#"
     },
     {
         "Name" : "News",
-        "Submenu" : []
+        "Submenu" : [],
+        "Link" : "http://www.endava.com/en/Success-Stories"
     },
     {
         "Name": "Events",
-        "Submenu": []
+        "Submenu": [],
+        "Link" : "http://www.endava.com/en/About/Events#2017"
     },
     {
         "Name": "Contact",
-        "Submenu":[]
+        "Submenu":[],
+        "Link" : "http://www.endava.com/en/Contact"
     }
 ]}

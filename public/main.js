@@ -37,20 +37,28 @@ function build(myJSON,i){
     var a = document.createElement("A");
     var li = document.createElement("LI");
     a.appendChild(text);
+    a.classList.add('normal');
+    a.setAttribute('href',myJSON.Menu[i].Link);
     li.appendChild(a);
     document.querySelector("ul").appendChild(li);
     if(myJSON.Menu[i].Submenu.length > 0){
         li.className = "dropdown";
-        a.className = "dropbtn";
+        a.classList.add('dropbtn');
         var con = document.createElement("DIV");
         li.appendChild(con);
         con.className = "dropdown__content";
         li.addEventListener("click", function (){
             this.lastChild.style.display = 'block';
-        });
+            this.firstChild.classList.remove('normal');
+            this.firstChild.classList.add('onmyClick');
+            document.getElementById('container--footer').style.background = 'rgba(100,0,0,0.5)';
+            document.getElementById('trans').style.background = 'rgba(100,0,0,0.5)';
+            });
         for(let j = 0; j < myJSON.Menu[i].Submenu.length; j++){
             var link = document.createElement("A");
-            var text2 = document.createTextNode(myJSON.Menu[i].Submenu[j]);
+            link.classList.add('normal');
+            link.setAttribute('href',myJSON.Menu[i].Submenu[j].Link);
+            var text2 = document.createTextNode(myJSON.Menu[i].Submenu[j].Name);
             link.appendChild(text2);
             con.appendChild(link); 
         }
@@ -66,10 +74,16 @@ function captura(e){
         console.log("ni mierdas")
     }else{
         hasclick = event.srcElement;
-        if(hasclick.getAttribute('class') != 'dropbtn'){
-            var list = document.getElementsByClassName('dropdown__content');
-            for(var k = 0; k < list.length;k++ ){
-                list[k].style.display = 'none';
+        if(!hasclick.classList.contains('dropbtn')){
+            let list = document.getElementsByClassName('dropdown__content');
+            for(let k = 0; k < list.length;k++ ){
+                if(list[k].style.display == 'block'){
+                    document.getElementById('container--footer').style.background = 'white';
+                    document.getElementById('trans').style.background = 'rgba(0,0,0,0.5)';
+                    list[k].parentElement.firstChild.classList.remove('onmyClick');
+                    list[k].parentElement.firstChild.classList.add('normal');
+                    list[k].style.display = 'none';
+                }
             }
         }
     }
