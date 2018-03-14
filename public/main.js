@@ -1,5 +1,6 @@
 var state = 0;
 
+
 function change(){
     if(state == 0){
         ocultarNav();
@@ -44,6 +45,9 @@ function build(myJSON,i){
         var con = document.createElement("DIV");
         li.appendChild(con);
         con.className = "dropdown__content";
+        li.addEventListener("click", function (){
+            this.lastChild.style.display = 'block';
+        });
         for(let j = 0; j < myJSON.Menu[i].Submenu.length; j++){
             var link = document.createElement("A");
             var text2 = document.createTextNode(myJSON.Menu[i].Submenu[j]);
@@ -52,6 +56,25 @@ function build(myJSON,i){
         }
     }
 }
+
+document.onclick = captura;
+
+function captura(e){
+    var hasclick;
+    if(e == null){
+        hasclick = e.target;
+        console.log("ni mierdas")
+    }else{
+        hasclick = event.srcElement;
+        if(hasclick.getAttribute('class') != 'dropbtn'){
+            var list = document.getElementsByClassName('dropdown__content');
+            for(var k = 0; k < list.length;k++ ){
+                list[k].style.display = 'none';
+            }
+        }
+    }
+}
+
 
 
 

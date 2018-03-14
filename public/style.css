@@ -15,26 +15,34 @@ body {
 
 .container--header {
     background-color: #ff3f10;
+    height: 70px;
 }
 
 .logo {
-    margin: 10px;
+    margin: 5px;
     float: left;
-    width: auto;
-    height: auto;
+    width: 200px;
+    height: 70px;
+}
+
+.logoend {
+    padding-left: 20px;
+    width: 140px;
+    height: 70px;
 }
 
 #nav {
     float: left;
     font-size: 21px;
-    height: fit-content;
+    height: 70px;
 }
 
 .search {
     float: right;
-    width: 300px;
-    height: auto;
+    min-width: 270px;
+    height: 44px;
     margin: 12px 14px;
+
 }
 
 ul {
@@ -53,9 +61,10 @@ li a{
     display: block;
     color:#eee;
     text-align: center;
-    padding: 14px 16px;
+    padding: 19px 16px;
     text-decoration: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 li a:hover{
@@ -87,8 +96,8 @@ li.dropdown {
     font-weight: bold;
 }
 
-.dropdown:hover .dropdown__content {
-    display: block;
+.dropdown__content {
+    display: none;
 }
 
 .container--section {
@@ -107,6 +116,7 @@ li.dropdown {
     font-size: 120px;
     line-height: 148px;
     font-weight: bold;
+    padding-bottom: 30px;
       
 }
 
@@ -137,15 +147,35 @@ p {
     padding: 6px;
     margin-top: 8px;
     font-size: 15px;
-    border: none;
     background-color: #ff3f10;
     color:white;
     font-style: italic;
     outline: none;
-    width: 80%;
+    width: 70%;
     display: none;
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+    border-top: none;
 }
 
 ::-webkit-input-placeholder { 
     color:white;
+  }
+
+  .box {
+      background-color: #ff3f10;
+      width:100px;
+      height:15px;
+      display: flex;
+      margin: auto;
+  }
+
+  .container__final {
+    float: left;
+    color: cyan;
+    align-self: center;
+    text-align: center;
+    padding-left: 100px;
+    padding-top: 20px;
   }

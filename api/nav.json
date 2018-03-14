@@ -5,7 +5,8 @@
     },
     {
         "Name": "Projects",
-        "Submenu": []
+        "Submenu": ["FeC",
+                    "DBC"]
     },
     {
         "Name": "Carrers",
