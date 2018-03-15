@@ -53,6 +53,7 @@ function build(myJSON,i){
             this.firstChild.classList.add('onmyClick');
             document.getElementById('container--footer').style.background = 'rgba(100,0,0,0.5)';
             document.getElementById('trans').style.background = 'rgba(100,0,0,0.5)';
+            document.getElementsByClassName('bigText')[0].style.filter = 'brightness(0.8)';
             });
         for(let j = 0; j < myJSON.Menu[i].Submenu.length; j++){
             var link = document.createElement("A");
@@ -80,6 +81,7 @@ function captura(e){
                 if(list[k].style.display == 'block'){
                     document.getElementById('container--footer').style.background = 'white';
                     document.getElementById('trans').style.background = 'rgba(0,0,0,0.5)';
+                    document.getElementsByClassName('bigText')[0].style.filter = 'none';
                     list[k].parentElement.firstChild.classList.remove('onmyClick');
                     list[k].parentElement.firstChild.classList.add('normal');
                     list[k].style.display = 'none';
