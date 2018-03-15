@@ -72,7 +72,6 @@ function captura(e){
     var hasclick;
     if(e == null){
         hasclick = e.target;
-        console.log("ni mierdas")
     }else{
         hasclick = event.srcElement;
         if(!hasclick.classList.contains('dropbtn')){
